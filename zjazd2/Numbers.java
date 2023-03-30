@@ -1,4 +1,12 @@
 package zjazd2;
+// Autor: Kamil Bogdański
+
+// Zadanie 5 (3 punkty) Zaimplementuj klasę Numbers. Dodaj konstruktor który przyjmuje trzy liczby typu integer. Dodaj metody:
+// sum(), zwraca sumę liczb;
+// average(), zwraca średnią arytmetyczną liczb;
+// min(), zwraca najmniejszą z liczb;
+// max(), zwraca największą z liczb;
+// geometric(), zwraca średnią geometryczną liczb; Przetestuj zaimplementowany program.
 
 public class Numbers {
 
