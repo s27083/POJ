@@ -17,7 +17,7 @@ public class Card {
     };
 
     private int checkWartosc(int wartosc) {
-        if (wartosc > 9 || wartosc < 1) {
+        if (wartosc > 10 || wartosc < 1) {
             throw new IllegalArgumentException("nie prawidlowa wartosc");
         }
         return wartosc;
