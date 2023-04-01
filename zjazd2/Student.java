@@ -18,16 +18,20 @@ public class Student {
     private int ocenyZPoj;
 
     Student(String imie, String nazwisko, int numerIndexu, int obecnosc, int ocenyZPoj) {
-        if (imie.length() > 1)
-            setImie(imie);
-        if (nazwisko.length() > 1)
-            setNazwisko(nazwisko);
+        setImie(imie);
+        setNazwisko(nazwisko);
         setNumerIndexu(numerIndexu);
         setObecnosc(obecnosc);
         if (obecnosc < 50)
             setOcenyZPoj(2);
         setOcenyZPoj(ocenyZPoj);
     }
+    
+    Student( int numerIndexu, int obecnosc, int ocenyZPoj) {
+        setNumerIndexu(numerIndexu);
+        setObecnosc(obecnosc);
+        setOcenyZPoj(ocenyZPoj);
+    };
 
     public void setOcenyZPoj(int ocenyZPoj) {
         this.ocenyZPoj = ocenyZPoj;
