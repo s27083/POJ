@@ -14,11 +14,11 @@ public class MyDate {
     private int year;
 
     MyDate(int month, int day, int year) {
-        if (month < 0 && month > 12)
+        if (month < 0 || month > 12)
             throw new IllegalArgumentException("nie prawidlowa wartosc miesiac zakres od 1 do 12");
-        else if (day < 0 && day > 31)
+        else if (day < 0 || day > 31)
             throw new IllegalArgumentException("nie prawidlowa wartosc dnia zakres od 1 do 31");
-        else if (year < 1990 && year > 2050)
+        else if (year < 1990 || year > 2050)
             throw new IllegalArgumentException("nie prawidlowa wartosc roku zakres od 1990 do 2050");
 
         setMonth(month);
