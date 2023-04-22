@@ -1,6 +1,6 @@
 public class Pojazd extends Maszyna {
     protected static int maxLiczbaPojazdow = 1000;
-    protected int nrPojazdu = 0;
+    protected static int nrPojazdu = 0;
     protected double moc;
     protected double momentObrotowy;
 
@@ -18,6 +18,6 @@ public class Pojazd extends Maszyna {
     public void wyswietl() {
         System.out.println("Pojazd " + nrPojazdu + " z " + maxLiczbaPojazdow + ": " + marka + " " + nazwa +
                 ", pojemnosc silnika: " + pojemnoscSilnika + ", rodzaj silnika: " + rodzajSilnika +
-                ", moc: " + moc + ", moment obrotowy");
+                ", moc: " + moc + ", moment obrotowy:" + momentObrotowy);
     }
 }
