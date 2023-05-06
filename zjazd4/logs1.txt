@@ -1,0 +1,4 @@
+INFO:Correct pin entered
+INFO:Turning off alarm
+ERROR:Wrong pin!
+INFO:Turning on alarm
