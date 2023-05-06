@@ -1,0 +1,2 @@
+ERROR:Wrong pin! Source: zjazd4.Safe@27716f4 Date: Sat May 06 23:22:46 CEST 2023
+INFO:Turning on alarm Source: zjazd4.Safe@27716f4 Date: Sat May 06 23:22:46 CEST 2023
