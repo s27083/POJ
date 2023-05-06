@@ -1,21 +1,28 @@
 package zjazd4;
 
-import java.awt.Toolkit;
 
 public class DogAlarm implements Alarm {
 
 
-    @Override
-    public void alarmTurnOff() {
+    public Logger logger;
 
-        logger.LogMessage(Severity.INFO, "Correct pin entered");
-        logger.LogMessage(Severity.INFO, "Turning off alarm");
+    DogAlarm(Logger logger) {
+        this.logger = logger;
+
     }
 
     @Override
-    public void alarmTurnOn() {
-        logger.LogMessage(Severity.ERROR, "Wrong pin!");
-        logger.LogMessage(Severity.INFO, "Turning on alarm");
-        System.out.println("Dogs out!");
+    public void alarmTurnOff(PinEvent event) {
+
+        logger.LogMessage(Severity.INFO, "Correct pin entered", event);
+        logger.LogMessage(Severity.INFO, "Turning off alarm", event);
+    }
+
+    @Override
+    public void alarmTurnOn(PinEvent event) {
+        logger.LogMessage(Severity.ERROR, "Wrong pin!", event);
+        logger.LogMessage(Severity.INFO, "Turning on alarm", event);
+        logger.LogMessage(Severity.INFO, "Dogs Out!", event);
+
     }
 }

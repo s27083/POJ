@@ -5,5 +5,5 @@ public interface Logger {
 
     Severity logLevel = null;
 
-    public void LogMessage(Severity severity, String message);
+    public void LogMessage(Severity severity, String message, PinEvent eventSource);
 }

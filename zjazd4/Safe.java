@@ -1,41 +1,45 @@
 package zjazd4;
 
-import java.util.Date;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Safe {
+    private String pin;
+    public List<Alarm> alarms = new ArrayList<>();
 
 
-    Safe(Alarm alarm, String pin) {
-        addAlarm(alarm);
+    public Safe(String pin) {
         this.pin = pin;
     }
 
-    public Alarm alarm;
-
-    private String pin;
-
     public void addAlarm(Alarm alarm) {
-        this.alarm = alarm;
+        alarms.add(alarm);
     }
 
     public void removeAlarm(Alarm alarm) {
-        this.alarm = null;
+        alarms.remove(alarm);
     }
 
     public void enterPin(String pin) {
-        PinEvent event = new PinEvent(this, new Date());
-        if (pin.equals(this.pin)) correctPin();
-        else wrongPin();
+        if (pin == this.pin) {
+            correctPin();
+        } else {
+            wrongPin();
+        }
     }
 
     private void wrongPin() {
-        PinEvent event = new PinEvent(this, new Date());
-        this.alarm.alarmTurnOn();
+        for (Alarm alarm : alarms) {
 
+            alarm.alarmTurnOn(new PinEvent(this));
+        }
     }
 
     private void correctPin() {
-        PinEvent event = new PinEvent(this, new Date());
-        alarm.alarmTurnOff();
+        for (Alarm alarm : alarms) {
+
+            alarm.alarmTurnOff(new PinEvent(this));
+        }
+
     }
 }

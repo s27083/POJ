@@ -1,9 +1,9 @@
 package zjazd4;
 
 public interface Alarm {
-    public static Logger logger = new FileLogger();
+    public Logger logger = new FileLogger();
 
-    public void alarmTurnOn();
+    public void alarmTurnOn(PinEvent event);
 
-    public void alarmTurnOff();
+    public void alarmTurnOff(PinEvent event);
 }
