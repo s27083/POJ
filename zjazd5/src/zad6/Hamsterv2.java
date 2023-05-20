@@ -2,11 +2,11 @@ package zad6;
 
 class Hamsterv2 implements Comparable<Hamsterv2> {
     private int hamsterNumber;
-    private String name;
+    private String hamsterName;
 
     Hamsterv2(int i, String name) {
         this.hamsterNumber = i;
-        this.name = name;
+        this.hamsterName = name;
     }
 
     @Override
@@ -15,10 +15,13 @@ class Hamsterv2 implements Comparable<Hamsterv2> {
     }
 
     public String hamsterNumber() {
-        return "This is Hamster #" + hamsterNumber + " named: " + name;
+        return "This is Hamster #" + hamsterNumber;
     }
 
     public int getHamsterNumber() {
         return hamsterNumber;
+    }
+    public String hamsterName() {
+        return " and his name is " +hamsterName;
     }
 }

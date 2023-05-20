@@ -6,7 +6,7 @@ class Printerv2 {
         Iterator<Hamsterv2> iterator = hl.iterator();
         while (iterator.hasNext()) {
             Hamsterv2 hamster = iterator.next();
-            System.out.println(hamster.hamsterNumber());
+            System.out.println(hamster.hamsterNumber()+hamster.hamsterName());
         }
     }
 }
