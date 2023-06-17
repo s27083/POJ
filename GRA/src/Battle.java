@@ -8,7 +8,6 @@ public class Battle extends Action {
     private General looser;
 
     Battle(General attacker,General target) throws Exception {
-        super();
         try {
             setAttacker(attacker);
             setTarget(target);
