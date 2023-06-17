@@ -87,6 +87,9 @@ public class General {
         if(getGoldCoins() < cost) return false;
         return true;
     }
+    public void trainSoldiers() {
+
+    }
 
     public void showArmy() {
         System.out.println(this.getArmy().getSoldiers());

@@ -3,7 +3,7 @@ public class Soldier {
     public Rank rank;
     private int experiance =1;
     private int strenght;
-    boolean alive = true;
+    public boolean alive = true;
 
     Soldier(Rank rank) {
         setRank(rank);
@@ -58,11 +58,11 @@ public class Soldier {
 
     public Rank increseRank(Soldier soldier) {
         Rank currentRank = soldier.rank;
-        return currentRank;
+        if(currentRank == Rank.MAJOR) return this.rank;
+        return currentRank.next();
     };
     private void updateStrenght() {
         this.strenght = getRankValue() * this.experiance;
-
     }
 
     public int getStrenght() {

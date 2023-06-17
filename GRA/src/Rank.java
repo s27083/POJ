@@ -8,6 +8,11 @@ public enum Rank {
     private Rank(int value) {
         this.value = value;
     }
+    private static final Rank[] vals = values();
+
+    public Rank next() {
+        return vals[(this.ordinal() + 1) % vals.length];
+    }
 
 
 }

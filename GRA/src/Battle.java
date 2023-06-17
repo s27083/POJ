@@ -8,7 +8,7 @@ public class Battle extends Action {
     private General looser;
 
     Battle(General attacker,General target) throws Exception {
-
+        super();
         try {
             setAttacker(attacker);
             setTarget(target);
@@ -100,6 +100,17 @@ public class Battle extends Action {
         else if(attackerArmy.isEmpty()) {
             throw new Exception("Target Army is empty");
         }
+        return true;
+    }
+
+    private boolean checkGold(General general) throws Exception {
+        int battleCost = 0;
+        for (Soldier soldier : general.getArmy().getSoldiers()) {
+            battleCost = battleCost + soldier.getRankValue();
+        }
+
+        if(!general.checkGold(battleCost)) throw new Exception("General " + general.getId() + " " + general.getName() + " doesn't have enough gold to attack");
+
         return true;
     }
 }
